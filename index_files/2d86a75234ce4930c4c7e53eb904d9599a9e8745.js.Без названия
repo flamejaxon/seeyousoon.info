@@ -1,0 +1,21 @@
+var code = `<div style='width: 100%;' id='alqua-widget'></div>
+<script>
+    function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+    
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                if (xmlhttp.status == 200) {
+                    document.getElementById('alqua-widget').innerHTML = xmlhttp.responseText;
+                } else {
+                document.getElementById('alqua-widget').style.display = 'none'
+                }
+            }
+        };
+    
+        xmlhttp.open('GET', 'https\u003A\/\/widget.alqua.io\/2d86a75234ce4930c4c7e53eb904d9599a9e8745', true);
+        xmlhttp.send();
+    }
+    loadXMLDoc();
+</script>`;
+document.write(code);

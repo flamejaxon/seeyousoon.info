@@ -1,0 +1,83 @@
+googletag.cmd.push(function() {
+    var mappingchance = googletag.sizeMapping().
+    addSize([320, 200], [[320, 50], [320, 100]]).
+    addSize([729, 200], [728, 90]).
+    addSize([980, 200], [[728, 90], [980, 200]]).
+    addSize([1025, 200], [[728, 90], [980, 90], [980, 200], [970, 250], [125, 125]]).
+    build();
+    
+    var mappingmpuepress = googletag.sizeMapping().
+    addSize([320, 200], [[300, 600], 'fluid', [300, 250], [125, 125]]).
+    addSize([729, 200], [[300, 600], 'fluid', [300, 250], [125, 125]]).
+    addSize([980, 200], [[300, 600], 'fluid', [300, 250]]).
+    addSize([1025, 200], [[300, 600], 'fluid', [300, 250]]).
+    build();
+
+	if (document.location.href.indexOf("europapress.es/chance/moda/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/moda', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/moda', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/moda', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modaBTF', ['fluid', [300, 250]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modaBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else if (document.location.href.indexOf("europapress.es/chance/gente/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/gente', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/gente', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/gente', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/genteBTF', ['fluid', [300, 250], [300, 600]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/genteBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else if (document.location.href.indexOf("europapress.es/chance/realeza/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/realeza', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/realeza', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/realeza', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/realezaBTF', ['fluid', [300, 250], [300, 600]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/realezaBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else if (document.location.href.indexOf("europapress.es/chance/cineymusica/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/cineymusica', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/cineymusica', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/cineymusica', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/cineymusicaBTF', ['fluid', [300, 250], [300, 600]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/cineymusicaBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else if (document.location.href.indexOf("europapress.es/chance/tv/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/tv', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/tv', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tv', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tvBTF', ['fluid', [300, 250], [300, 600]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tvBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else if (document.location.href.indexOf("europapress.es/chance/tendencias/") != -1) {
+		googletag.defineSlot('/5555/adconion.chance.es/tendencias', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/tendencias', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tendencias', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tendenciasBTF', ['fluid', [300, 250], [300, 600]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/tendenciasBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	} else {
+		googletag.defineSlot('/5555/adconion.chance.es/home', [[980, 200], [970, 250], [728, 90], [125, 125]], 'sc-top').defineSizeMapping(mappingchance).addService(googletag.pubads());
+		googletag.defineOutOfPageSlot('/5555/adconion.chance.es/home', 'sc-oop').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/home', [[300, 600], 'fluid', [300, 250]], 'sc-mpu-top').defineSizeMapping(mappingmpuepress).addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/modulo', [[700, 150], 'fluid'], 'sc-modulo').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/brandday', [800, 250], 'sc-brandday').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/homeBTF', ['fluid', [300, 250]], 'sc-mpu-btf').addService(googletag.pubads());
+		googletag.defineSlot('/5555/adconion.chance.es/homeBTF2', ['fluid', [300, 250]], 'sc-mpu-btf2').addService(googletag.pubads());
+	}
+	googletag.pubads().enableLazyLoad();
+	googletag.pubads().enableLazyLoad({
+		fetchMarginPercent : 1
+	});
+	googletag.pubads().enableLazyLoad({
+		fetchMarginPercent : 1,
+		renderMarginPercent : 1,
+		mobileScaling : 0
+	});
+	googletag.enableServices();
+}); 

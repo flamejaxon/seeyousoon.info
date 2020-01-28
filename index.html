@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>
+        Las 7 reglas de oro para una alimentación saludable
+    </title>
+    <link href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-16.ico" rel="shortcut icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="https://s01.europapress.net/imagenes/estaticos/favicons/chance/favicon-57.png">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="distribution" content="global">
+    <link rel="index" title="Europa Press" href="https://www.europapress.es/">
+    <link href="https://plus.google.com/101131134978819552698" rel="publisher">
+    <link href="./index_files/estilos_1297036692716257285_0_r2776.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./index_files/estilos_0_137451536384_r2776.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+    
+    <meta name="viewport" content="width=1080">
+
+
+
+
+    <style>
+        body.wallpaper-ep-home {
+            background-position: 50% 60px !important;
+        }
+    </style>
+
+</head>
+
+<body class="CuerpoResponsive   pace-done">
+
+    <!-- Facebook Pixel Code -->
+      <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1534231010058651');
+  fbq('track', 'CompleteRegistration');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1534231010058651&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -- background-image: url(img/bg.jpg) repeat-x;-->
+    
+    <div id="masterMenu" class="master ">
+
+        <div id="navegacionFixed" class="navegacionFixed">
+            <div class="row">
+                <div class="menu-horizontal-superior twelve columns chance">
+                    
+                    <div id="ctl00_NavegacionFixed_logoep" class="logo-cabecera chance">
+                        <a href="https://www.europapress.es/chance/" title="Chance | Noticias de famosos, moda y belleza">
+                            <img src="./index_files/CHANCE_190x29.png" class="img-chance" alt="Logotipo de Chance">
+                        </a>
+                        <a href="https://www.europapress.es/" id="ctl00_NavegacionFixed_logoepprincipal" title="Europa Press">
+                            <!--<img class="imagen-logo-cabecera" alt="Logotipo de Europa Press" src="https://s01.europapress.net/imagenes/estaticos/logoEP-menu.png"/>-->
+                            <span class="logo-europapress-texto negro">europa</span>
+                            <span class="logo-europapress-texto rojo">press</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="menu-completo" class="menu-completo oculto">
+
+
+            <div id="menu-lateral" class="no-visible"></div>
+
+
+
+            <script type="text/javascript">
+                var altura = window.innerHeight;
+                var cargarMenuJson = function cargarMenu() {
+                    var jsonFile = getJsonFile();
+                    getJSON(jsonFile, function(err, json) {
+                        if (err !== null) {
+                            console.log('Error al cargar el menú ' + err);
+                        } else {
+                            var ulMenuLateral = document.createElement("ul");
+                            ulMenuLateral.className = "lista-menu-completo";
+                            for (var i in json) {
+                                var menuItem = document.createElement("li");
+                                menuItem.setAttribute("itemprop", "name");
+                                menuItem.className = "menuItemPrincipal";
+                                var enlace = document.createElement("a");
+                                enlace.setAttribute("itemprop", "url");
+                                switch (json[i].tipo) {
+                                    case "home":
+                                        menuItem.classList.add(json[i].cssAdicional);
+                                        menuItem.classList.add("europapressMenu");
+                                        enlace.href = location.protocol + "//" + window.location.hostname;
+                                        enlace.setAttribute("title", json[i].titulo);
+                                        var extraClass = "";
+                                        if (window.location.hostname.startsWith("m.")) {
+                                            extraClass = "movil";
+                                        }
+                                        enlace.innerHTML = json[i].ep1 + " <h4 class='rojo " + extraClass + "'>" + json[i].ep2 + "</h4>";
+                                        menuItem.appendChild(enlace);
+                                        ulMenuLateral.appendChild(menuItem);
+                                        break;
+                                    case "abonados":
+                                        menuItem.classList.add(json[i].cssAdicional);
+                                        enlace.href = json[i].url;
+                                        enlace.setAttribute("title", json[i].titulo);
+                                        enlace.innerHTML = json[i].titulo;
+                                        menuItem.appendChild(enlace);
+                                        ulMenuLateral.appendChild(menuItem);
+                                        break;
+                                    case "buscadormovil":
+                                        if (window.location.hostname.startsWith("m.")) {
+                                            menuItem.classList.add(json[i].cssAdicional);
+                                            var formBuscador = document.createElement("form");
+                                            formBuscador.id = "formulario-buscador-estrechado";
+                                            var inputBuscador = document.createElement("input");
+                                            inputBuscador.id = "texto-buscador-estrechado";
+                                            inputBuscador.setAttribute("type", "text");
+                                            inputBuscador.setAttribute("placeholder", json[i].titulo);
+                                            inputBuscador.setAttribute("required", "");
+                                            inputBuscador.setAttribute("itemportal", json[i].portalId);
+                                            inputBuscador.setAttribute("canalid", json[i].canalId);
+                                            var iconoBuscador = document.createElement("span");
+                                            iconoBuscador.id = "icono-buscador-estrechado";
+                                            iconoBuscador.className = "icon-search icono-buscador-estrechado";
+                                            iconoBuscador.setAttribute("onclick", "buscar()");
+                                            formBuscador.appendChild(inputBuscador);
+                                            formBuscador.appendChild(iconoBuscador);
+                                            menuItem.appendChild(formBuscador);
+                                            ulMenuLateral.appendChild(menuItem);
+                                        }
+                                        break;
+                                    case "dominioexterno":
+                                        if (json[i].hasOwnProperty('cssAdicional')) {
+                                            menuItem.classList.add(json[i].cssAdicional);
+                                        }
+                                        var dominio = "www.";
+                                        if (window.location.hostname.startsWith("m.")) {
+                                            dominio = "m.";
+                                        }
+                                        enlace.href = location.protocol + "//" + dominio + json[i].url;
+                                        enlace.setAttribute("title", json[i].titulo);
+                                        enlace.setAttribute("rel", "nofollow");
+                                        if (json[i].hasOwnProperty('bullet')) {
+                                            enlace.innerHTML = "<span class='bullet'>" + json[i].titulo + "</span>";
+                                        } else {
+                                            enlace.innerHTML = json[i].titulo;
+                                        }
+                                        menuItem.appendChild(enlace);
+                                        ulMenuLateral.appendChild(menuItem);
+                                        break;
+                                    case "webexterna":
+                                        enlace.href = json[i].url;
+                                        enlace.setAttribute("title", json[i].titulo);
+                                        enlace.setAttribute("rel", "nofollow");
+                                        enlace.innerHTML = json[i].titulo;
+                                        menuItem.appendChild(enlace);
+                                        ulMenuLateral.appendChild(menuItem);
+                                        break;
+                                    case "desplegable":
+                                        menuItem.classList.add("acordeon");
+                                        var span = document.createElement("span");
+                                        span.innerHTML = json[i].titulo;
+                                        var ul = document.createElement("ul");
+                                        ul.className = "sub-secciones";
+                                        var jsonHijos = json[i].hijos;
+                                        for (var j in jsonHijos) {
+                                            var menuItem2 = document.createElement("li");
+                                            menuItem2.setAttribute("itemprop", "name");
+                                            menuItem2.className = "menuItemSecundario";
+                                            menuItem2.classList.add("noacordeon");
+                                            var enlace2 = document.createElement("a");
+                                            enlace2.setAttribute("itemprop", "url");
+                                            enlace2.href = location.protocol + "//" + window.location.hostname + jsonHijos[j].url;
+                                            enlace2.setAttribute("title", jsonHijos[j].titulo);
+                                            enlace2.innerHTML = jsonHijos[j].titulo;
+                                            menuItem2.appendChild(enlace2);
+                                            ul.appendChild(menuItem2);
+                                        }
+                                        menuItem.appendChild(span);
+                                        ulMenuLateral.appendChild(menuItem);
+                                        ulMenuLateral.appendChild(ul);
+                                        break;
+                                    default:
+                                        if (json[i].hasOwnProperty('nomobile') && window.location.hostname.startsWith("m.")) {
+                                            break;
+                                        }
+                                        if (json[i].hasOwnProperty('cssAdicional')) {
+                                            menuItem.classList.add(json[i].cssAdicional);
+                                        }
+                                        enlace.href = location.protocol + "//" + window.location.hostname + json[i].url;
+                                        enlace.setAttribute("title", json[i].titulo);
+                                        if (json[i].hasOwnProperty('bullet')) {
+                                            enlace.innerHTML = "<span class='bullet'>" + json[i].titulo + "</span>";
+                                        } else {
+                                            enlace.innerHTML = json[i].titulo;
+                                        }
+                                        menuItem.appendChild(enlace);
+                                        ulMenuLateral.appendChild(menuItem);
+                                }
+                            }
+                            var divMenuLateral = document.getElementById("menu-lateral");
+                            var navMenuLateral = document.createElement("nav");
+                            navMenuLateral.id = "menu";
+                            navMenuLateral.className = "nav";
+                            navMenuLateral.setAttribute("itemscope", "");
+                            navMenuLateral.setAttribute("itemtype", "http://schema.org/SiteNavigationElement");
+                            navMenuLateral.style.maxHeight = parseInt(document.documentElement.clientHeight) - 40 + "px";
+                            altura -= 60;
+                            ulMenuLateral.style.height = altura + 'px';
+                            navMenuLateral.appendChild(ulMenuLateral);
+                            divMenuLateral.appendChild(navMenuLateral);
+                            var itemsAcordeon = document.getElementsByClassName("acordeon");
+                            for (var k = 0; k < itemsAcordeon.length; k++) {
+                                itemsAcordeon[k].onclick = function() {
+                                    this.classList.toggle("active");
+                                    this.nextElementSibling.classList.toggle("show");
+                                };
+                            }
+                            defer(function() {
+                                $("#formulario-buscador-estrechado").submit(function() {
+                                    buscar();
+                                    return false;
+                                });
+                            });
+                        }
+                    });
+                };
+                var getJSON = function(url, callback) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true);
+                    xhr.responseType = 'json';
+                    xhr.onload = function() {
+                        var status = xhr.status;
+                        if (status === 200) {
+                            callback(null, xhr.response);
+                        } else {
+                            callback(status, xhr.response);
+                        }
+                    };
+                    xhr.send();
+                };
+
+                function getJsonFile() {
+                    var jsonName = "/menus/MenuEP.json";
+                    var url = window.location.pathname;
+                    var nombreHost = window.location.host;
+                    var objUrl = new URL(document.URL);
+                    var canalid = objUrl.searchParams.get("ch");
+                    if (window.location.hostname.startsWith("m.")) {
+                        if (url.startsWith("/ciencia/") || canalid === "298") {
+                            jsonName = "/menus/ciencia.json";
+                        } else if (url.startsWith("/desconecta/") || canalid === "901") {
+                            jsonName = "/menus/desconecta.json";
+                        } else if (url.startsWith("/epsocial/") || canalid === "313") {
+                            jsonName = "/menus/epsocial.json";
+                        } else if (url.startsWith("/economia/") || canalid === "136") {
+                            jsonName = "/menus/economia.json";
+                        } else if (url.startsWith("/portaltic/") || canalid === "564") {
+                            jsonName = "/menus/portaltic.json";
+                        } else if (url.startsWith("/turismo/") || canalid === "679") {
+                            jsonName = "/menus/turismo.json";
+                        }
+                    }
+
+                    if (url.startsWith("/chance/") || canalid === "549") {
+                        jsonName = "/menus/chance.json";
+                    } else if (nombreHost.includes("notimerica.com") || canalid === "527") {
+                        jsonName = "/menus/notimerica.json";
+                    } else if (nombreHost.includes("hacerfamilia.com") || canalid === "861") {
+                        jsonName = "/menus/hacerfamilia.json";
+                    } else if (nombreHost.includes("aldia.cat")) {
+                        jsonName = "/menus/aldia.json";
+                    } else if (nombreHost.includes("culturaocio.com") || canalid === "777") {
+                        jsonName = "/menus/culturaocio.json";
+                    } else if (nombreHost.includes("infosalus.com") || canalid === "74") {
+                        jsonName = "/menus/infosalus.json";
+                    } else if (nombreHost.includes("epagrama.es") || canalid === "1094") {
+                        jsonName = "/menus/epagrama.json";
+                    } else if (nombreHost.includes("mercadofinanciero.com") || canalid === "1170") {
+                        jsonName = "/menus/mercadofinanciero.json";
+                    }
+
+                    return jsonName;
+                }
+
+                function buscar() {
+                    var inputTexto = document.getElementById('texto-buscador-estrechado');
+                    if (inputTexto.value.length > 0) {
+                        window.location.href = ['/buscador.aspx?buscar=', inputTexto.value, '&buscarCodificado=', encode64(inputTexto.value), '&portal=', inputTexto.getAttribute("itemportal"), "&ch=", inputTexto.getAttribute("canalid"), '&mostrar=false&btn=true'].join("");
+                    }
+                    return false;
+                }
+
+
+
+
+
+                function defer(method) {
+                    if (window.jQuery) {
+                        method();
+                    } else {
+                        setTimeout(function() {
+                            defer(method);
+                        }, 50);
+                    }
+                }
+            </script>
+
+
+
+        </div>
+
+        <div id="background"></div>
+    </div>
+
+    
+    <div id="compartir-mini" class="compartir-mini oculto">
+        <div id="cerrar-compartir-mini" class="cerrar-compartir-mini"><span class="icon-close"></span></div>
+        <ul class="social-contenedor center-block">
+            <li>
+                <div onclick="AbrePopUpRedim(&#39;https://meneame.net/login.php?return=/submit.php?url=https://www.europapress.es/chance/belleza/noticia-reglas-oro-alimentacion-saludable-20171010164942.html&amp;&#39;, 450, 550); trackEventGAFull(&#39;DESKTOP_COMPARTIR_MENEAME_MENU_RESPONSIVE&#39;, &#39;click&#39;, &#39;&#39;, 0);" target="_blank" rel="nofollow"><span class="icon-meneame boton-social"></span>Menéalo</div>
+            </li>
+            <li>
+                <div onclick="AbrePopUpRedim(&#39;https://www.facebook.com/sharer.php?u=https://www.europapress.es/chance/belleza/noticia-reglas-oro-alimentacion-saludable-20171010164942.html&amp;&#39;, 450, 550); trackEventGAFull(&#39;DESKTOP_COMPARTIR_FACEBOOK_MENU_RESPONSIVE&#39;, &#39;click&#39;, &#39;&#39;, 0);" target="_blank" rel="nofollow"><span class="icon-facebook boton-social"></span>Comparte en Facebook</div>
+            </li>
+            <li>
+                <div onclick="AbrePopUpRedim(&#39;https://twitter.com/share?text=Las+7+reglas+de+oro+para+una+alimentaci%c3%b3n+saludable&amp;via=CHANCE_es&amp;url=https://www.europapress.es/chance/belleza/noticia-reglas-oro-alimentacion-saludable-20171010164942.html&amp;&#39;, 450, 550); trackEventGAFull(&#39;DESKTOP_COMPARTIR_TWITTER_MENU_RESPONSIVE&#39;, &#39;click&#39;, &#39;&#39;, 0);" target="_blank" rel="nofollow"><span class="icon-twitter boton-social"></span>Comparte en Twitter</div>
+            </li>
+            <li>
+                <div onclick="AbrePopUpRedim(&#39;https://www.linkedin.com/cws/share?url=https://www.europapress.es/chance/belleza/noticia-reglas-oro-alimentacion-saludable-20171010164942.html&amp;&#39;, 450, 550); trackEventGAFull(&#39;DESKTOP_COMPARTIR_LINKEDIN_MENU_RESPONSIVE&#39;, &#39;click&#39;, &#39;&#39;, 0);" target="_blank" rel="nofollow"><span class="icon-linkedin boton-social"></span>Comparte en Linkedin</div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var itemsAcordeon = document.getElementsByClassName("acordeon");
+        var itemsAcordeonFocus = document.getElementsByClassName("acordeon focus");
+        var i;
+        for (i = 0; i < itemsAcordeon.length; i++) {
+            itemsAcordeon[i].onclick = function() {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show")
+            }
+        }
+        for (i = 0; i < itemsAcordeonFocus.length; i++) {
+            itemsAcordeonFocus[i].onclick = function() {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+                setTimeout(function() {
+                    if (document.getElementsByClassName("menuItemPrincipal acordeon focus active")[0]) {
+                        document.getElementsByClassName("menuItemPrincipal acordeon focus active")[0].scrollIntoView()
+                    }
+                }, 200)
+            }
+        }
+        if (document.URL.toLowerCase() === "https://www.europapress.es/") {
+            document.onscroll = function() {
+                if (window.scrollY === 0) {
+                    document.getElementsByClassName("logo-cabecera")[0].style.display = "none";
+                    jQuery("#ctl00_NavegacionFixed_menuportada").fadeIn()
+                }
+                if (window.scrollY > 50) {
+                    document.getElementById("ctl00_NavegacionFixed_menuportada").style.display = "none";
+                    jQuery(".logo-cabecera").fadeIn()
+                }
+            }
+        }
+        //if (document.URL.toLowerCase() === "https://www.aldia.cat/") {
+        //    document.onscroll = function () {
+        //        if (window.scrollY === 0) { document.getElementsByClassName("logo-cabecera")[0].style.display = "none";}
+        //        if (window.scrollY > 50) { jQuery(".logo-cabecera").fadeIn() }
+        //    }
+        //}
+        var textResizer = {
+            currIncrementMax: 9,
+            currIncrementUnit: 2,
+            currIncrementIndex: 0,
+            init: function(myRoot, resizeableElementList, clickElement) {
+                myRoot = myRoot || '#CuerpoNoticiav2';
+                resizeableElementList = resizeableElementList || 'p, li';
+                clickElement = clickElement || '.tool.textresizer';
+                this.root = $(myRoot);
+                this.resizeableElements = $(resizeableElementList, this.root);
+                $(clickElement).on('click', this, this.resize)
+            },
+            resize: function(event) {
+                var currObj = event.data;
+                if (currObj.currIncrementIndex === currObj.currIncrementMax) {
+                    currObj.currIncrementIndex = 0;
+                    currObj.currIncrementUnit = (currObj.currIncrementUnit === 2) ? -2 : 2
+                }
+                currObj.currIncrementIndex = currObj.currIncrementIndex + 1;
+                currObj.resizeableElements.each(function() {
+                    var elm = $(this);
+                    var currSize = parseFloat(elm.css('font-size'), 5);
+                    var result = currSize + currObj.currIncrementUnit;
+                    elm.css('font-size', result)
+                })
+            }
+        };
+        var entro = 0;
+
+        function Resize() {
+            if (entro === 0) {
+                textResizer.init();
+                entro = 1
+            }
+        }
+        if (document.URL.toLowerCase() === "https://www.hacerfamilia.com/") {
+            document.onscroll = function() {
+                if (window.scrollY === 0) {
+                    jQuery(".logo-cabecera .img-hacerfamilia").fadeOut()
+                }
+                if (window.scrollY > 50) {
+                    jQuery(".logo-cabecera .img-hacerfamilia").fadeIn()
+                }
+            }
+        }
+    </script>
+
+    <div id="ctl00_NavegacionFixed_div_ultnoticias" class="overlay">
+        <div id="overlay-header" class="overlay-header">
+            <div class="fecha_overlay">
+
+            </div>
+            <div class="cerrar_overlay" onclick="closeNav();">
+                <span class="icon-close"></span>
+            </div>
+        </div>
+
+
+        <div class="overlay-content" id="overlay-content">
+
+        </div>
+
+
+        <script>
+            var fondo = document.getElementById('background');
+
+            /* Open */
+            function openNav() {
+                var altura = window.innerHeight;
+                document.getElementById("ctl00_NavegacionFixed_div_ultnoticias").style.right = "0px";
+                fondo.style.height = altura + "px";
+                fondo.classList.add('fondo-menu-ultimahora');
+                document.getElementById("overlay-header").style.position = "fixed";
+                document.getElementById("tabs-ultimasnoticias").style.position = "fixed";
+                jQuery("#badge_notification").empty();
+                jQuery("#badge_notification").addClass("badge_padding_0");
+                jQuery("#badge_notification").removeClass("badge_padding_notification");
+
+            }
+
+            /* Close */
+            function closeNav() {
+                document.getElementById("ctl00_NavegacionFixed_div_ultnoticias").style.right = "-400px";
+                fondo.style.height = "0px";
+                fondo.classList.remove('fondo-menu-ultimahora');
+                document.getElementById("overlay-header").style.position = "relative";
+                document.getElementById("tabs-ultimasnoticias").style.position = "relative";
+                document.getElementById('background').classList.remove('fondo-menu-ultimahora');
+                jQuery("#badge_notification").empty();
+                jQuery(".articulo.articulo-nuevo").removeClass("articulo-nuevo");
+
+            }
+        </script>
+    </div>
+
+
+    <form method="post" action="https://www.europapress.es/chance/belleza/noticia-reglas-oro-alimentacion-saludable-20171010164942.html" id="aspnetForm">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="d9AVFdiu5MycrvrVMfJlJKSPneWO5QyFNwcVyyUeIeEw3ke15tHYcIavWF4jNiiWlFCaNvmRf6ZOWhGoJIJpaGbcX9Y=">
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AA38F69C">
+        </div>
+
+
+
+
+
+
+
+
+        <div id="PublicidadSuperior" class="Canvas">
+            
+            &nbsp;
+        </div>
+
+
+        <div id="Cabecera" class="nivel1 responsive">
+
+
+
+
+
+            <div class="container center-content-container">
+                
+            </div>
+
+
+
+        </div>
+
+        <div class="full-page-width-noticia">
+
+
+
+            <div id="ContenedorDocNomral" class="container center-content-container">
+                <div class="row">
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="row flex">
+
+                    <div class="twelve columns titularContainer">
+                        <h1 itemprop="headline" class="titular">Las 7 reglas de oro para una alimentación saludable</h1>
+
+                    </div>
+
+                </div>
+                <div class="row flex">
+
+
+                    <div class="eight columns columnadoble ColumnaPrincipal">
+
+
+
+
+
+                        <div id="NoticiaPrincipal">
+                            <!--inicio FechaNoticia-->
+                            
+                            <div class="full644">
+                                <!-- inicio foto -->
+                                <div class="schema_foto">
+                                    <picture>
+                                        <source srcset="https://img.europapress.es/fotoweb/fotonoticia_20171010164942_640.webp" type="image/webp">
+                                        <source srcset="https://img.europapress.es/fotoweb/fotonoticia_20171010164942_640.jpg" type="image/jpeg">
+                                        <img id="fotoPrincipalNoticia" src="./index_files/fotonoticia_20171010164942_640.jpg" border="0" alt="DIETA MEDITERRÁNEA" title="Las 7 reglas de oro para una alimentación saludable" width="640" height="480" itemprop="image"></picture>
+                                </div>
+                                <!-- fin foto -->
+                                <!-- inicio pie-firma -->
+                                <div class="captionv2">
+                                    <figcaption> CORDON PRESS</figcaption>
+                                </div> <!-- fin pie-firma -->
+                            </div>
+                            <!-- fin multimedia -->
+
+                            <div class="NormalTextoNoticia" id="CuerpoNoticiav2" itemprop="articleBody">
+                                <p>&nbsp;&nbsp;&nbsp;MADRID, 10 Oct. (CHANCE) - </p>
+                                <p itemprop="description">La <strong>dieta mediterránea</strong> es la dieta equilibrada por excelencia, basada en una alimentación rica en vegetales, cereales, frutas, hidratos de carbono, legumbres, proteínas y lácteos, y por supuesto, su producto estrella: el aceite de oliva. Sin embargo, a pesar de sus beneficios, las estadísticas demuestran que los españoles no terminan de adoptar todos<strong> los hábitos de alimentación saludables necesarios</strong> y a menudo, cometen errores que perjudican su salud y su estado físico.</p>
+                                <p>Tanto es así que, según los datos de la <strong>Fundación Española del Corazón (FEC),</strong> el 18% de los españoles, es decir, uno de cada cinco, considera que su dieta es deficiente. Entre los principales motivos que resaltan se encuentran el bajo consumo de alimentos como el pescado, las verduras y el exceso de azúcares. A esto hay que añadir que, tal y como afirma la Sociedad Española para el Estudio de la Obesidad (SEEDO), actualmente un 20% de la población española padece obesidad.</p>
+                                <p>En este sentido, y con el objetivo de hacer más sencillo el proceso de adaptación a una dieta saludable, hemos recopilado junto con los expertos en nutrición de<em> Krissia</em> las claves prácticas que contribuirán a mejorar nuestra alimentación:</p>
+                                <p><strong>1. Desayuno sí, si sabes con qué.</strong> Todos sabemos que es fundamental empezar el día con un desayuno potente que nos aporte energía suficiente para afrontar la jornada, pero ¿qué debe contener? Para que nos dote de un buen chute de energía, la primera comida del día debe estar formada por lácteos, frutas, cereales integrales, grasas saludables y proteínas. Lo ideal es dedicar aproximadamente 15 minutos y que estos se sitúen lo más alejados posible del momento en el que nos hemos levantado, por lo que es recomendable desayunar después de haber pasado por el proceso de aseo y, preferiblemente, no salir de casa inmediatamente después.</p>
+                                
+                                <p><strong>2. La fruta como snack para picar.</strong> Comer a media mañana o merendar es muy saludable, pero siempre que ingiramos los alimentos correctos. Prueba con fruta, de manera que activemos el metabolismo y consigamos tener digestiones menos pesadas a la hora de la comida o la cena.</p>
+                                <p><strong>3. Introduce los tés en tu dieta.</strong> Existen infinidad de tés e infusiones, cuyas bondades son innumerables, con deliciosos sabores para satisfacer todos los gustos. Incluir en el desayuno un té verde es un pequeño gesto que nos hará avanzar en nuestro camino hacia una alimentación más saludable. Adicionalmente, esto nos ayudará a consumir más agua, uno de los mantras fundamentales que deben seguirse en toda dieta.</p>
+                                <p><strong>4. Equilibra el tipo de nutrientes consumidos y elige bien el momento.</strong> Es importante diseñar la dieta para que esta contenga las cantidades recomendadas de todos los nutrientes pero, además, también se debe definir cuándo lo ingerimos. El momento del día o de la noche en el que consumimos los alimentos influirá en cómo vamos a metabolizarlos. Así, todas las comidas deben incluir un poco de proteína, un poco de carbohidratos y un poco de grasa, variando los porcentajes. En el desayuno se recomienda priorizar los hidratos integrales, para el snack de media mañana es preferible combinar carbohidratos con proteínas, antes de entrenar podremos consumir carbohidratos y reservaremos las proteínas para el post-entreno.</p>
+                                <p><strong>5. Aumentar el consumo de pescado.</strong> A pesar de que en España contamos con una gran variedad de pescados y mariscos, su consumo a nivel nacional sigue disminuyendo y nos hallamos muy alejados de las cantidades recomendadas en una buena dieta mediterránea. La importancia del consumo de estos productos del mar radica en los efectos saludables que sus ácidos grasos omega-3 nos aportan, siendo esenciales para nuestro cerebro y nuestro sistema circulatorio.</p>
+                                <p><strong>6. Cenar pronto.</strong> Aunque debido a nuestro estilo de vida a veces no es posible, la recomendación ideal es cenar como muy tarde a las 20 horas. De esta forma, el organismo tendrá tiempo suficiente de hacer la digestión antes del momento de irse a la cama, teniendo en cuenta que, por ejemplo, las proteínas tardan de 3 a 4 horas en digerirse. Seguir este consejo puede ayudarnos a tener un sueño reparador y estar más descansados.</p>
+                                <p><strong>7. No llevar una dieta excesivamente estricta.</strong> Para mantener no solo la salud física sino, además, la mental, es importante ser flexible con la dieta y permitirnos ciertos caprichos de vez en cuando. Para ello, lo ideal es ceñirnos a la regla del 80/20: mientras el 80% de los alimentos que consumamos sean sanos, podremos permitirnos un 20% de algunos que sean algo más calóricos.</p>
+                            </div>
+
+                            <!-- © 2020 Europa Press. Está expresamente prohibida la redistribución y la redifusión de todo o parte de los contenidos de esta web sin su previo y expreso consentimiento. -->
+                            <!-- google_ad_section_end -->
+
+                            
+                            <script type="text/javascript" src="./index_files/card_loader.js.Без названия"></script>
+                            <div class="js-destino"></div>
+                            <div class="js-origen2" data-destino=".js-destino2" style="width:100%">
+                                <div id="taboola-below-article-thumbnails" class=" trc_related_container trc_spotlight_widget">
+                                    <div class="trc_rbox_container" style="display: none;">
+                                        <div>
+                                            <div id="trc_wrapper_66643" class="trc_rbox alternating-thumbnails-a" style="overflow: hidden; display: none;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    window._taboola = window._taboola || [];
+                                    _taboola.push({
+                                        mode: 'alternating-thumbnails-a',
+                                        container: 'taboola-below-article-thumbnails',
+                                        placement: 'Below Article Thumbnails',
+                                        target_type: 'mix'
+                                    });
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="rss"></div>
+
+
+
+
+
+                    </div>
+                    
+                </div>
+                <div class="row">
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </form><iframe name="__cmpLocator" style="display: none;" src="./index_files/saved_resource(2).html"></iframe>
+
+
+    <footer id="footer" role="contentinfo" class="footer chance">
+        <div class="row">
+            <div class="twelve columns">
+
+
+
+
+
+
+
+
+                <div id="ctl00_Pie_2014_DivLogoDominio" class="DivLogo">
+                    <div class="pieEuropa">
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="bloquePie container">
+
+
+
+
+
+
+
+
+
+
+                    <div id="ctl00_Pie_2014_Pie_Chance" class="bloque-pie">
+
+                        <a href="https://www.europapress.es/chance/" title="chance">
+                            <img src="./index_files/CHANCE_580x87.png" alt="chance" class="logotipo-chance-pie">
+                        </a>
+
+                        
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <p class="pieCopyright copyright-europapress">
+                    © 2020 
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
+
+</body></html>

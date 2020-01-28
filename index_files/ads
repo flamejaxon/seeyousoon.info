@@ -1,0 +1,71 @@
+(function() {
+    SmartIntxt = {
+        config : {
+            site_name : 'chance',
+            playerHTML5 : "epchance.es.intxt.html5.smartclip",
+            elementContainer : 'intextsmartclip',
+            Intext_management_script : 'https://cdn.smartclip-services.com/v1/Storage-a482323/smartclip-services/ava/ava.js',
+            minAdWidth : 320,
+            maxAdWidth : 900,
+            customLocation: false
+        },
+        "init": function(){
+            var sc_date = new Date();
+            var sc_day = sc_date.getDate();
+            var sc_hour = sc_date.getHours();
+            var sc_pixel = document.createElement("script");
+            var url = SmartAva.config.smartclipConfig;
+            sc_pixel.type = "text/javascript";
+            sc_pixel.src = url;
+            document.body.appendChild(sc_pixel);
+            var sc = document.createElement('script');
+            sc.type = 'text/javascript';
+            sc.async = 'true';
+            sc.src='//dco.smartclip.net/?plc=93229',
+            sc.onload = sc.onreadystatechange = function() {
+                var rs = this.readyState;
+                if (rs && rs != 'complete' && rs != 'loaded') return;
+                try {
+                    SmartPlay(SmartIntxt.config.elementContainer, {
+                        adRequest: {
+                            html: {
+                                urls:   [
+                                                '//ad.sxp.smartclip.net/select?type=dyn&ple=' + SmartIntxt.config.playerHTML5 + '~~400x320&cu_smar_cors=1&smar_cors=1&fwd_dt1=&fwd_dt2=&fwd_sz=400x320&&ang_contxt=1&inswipe=[ALLOWINSWIPE]&optout=&ang_tpl=2&consent=&rnd=92755845&ang_ref=https%3A%2F%2Fwww.europapress.es%2Fchance%2Fbelleza%2Fnoticia-reglas-oro-alimentacion-saludable-20171010164942.html',
+                                                'https://ima3vpaid.appspot.com/?adTagUrl=https%3A%2F%2Fgoogleads.g.doubleclick.net%2Fpagead%2Fads%3Fclient%3Dca-video-pub-8674340505315230%26slotname%3D3156953096%26ad_type%3Dvideo%26description_url%3Dhttp%253A%252F%252Feuropapress.es%26max_ad_duration%3D30000%26videoad_start_delay%3D0&type=js'
+                                        ],
+                                limit: 1
+
+                            }
+
+                            
+                        },
+                        minAdWidth: SmartIntxt.config.minAdWidth,
+                        maxAdWidth: SmartIntxt.config.maxAdWidth,
+                        elementLocator: {
+                            allowInViewport: false,
+                            minimumElementWidth: 320,
+                            scanPixelsBelowViewport: 800
+                        },
+                        skipText: Site_conf.ava_desk.skipText,
+                        skipOffset: Site_conf.ava_desk.skipOffset, // overriden by VAST3 skipoffset, value of 0 will not show a skip button 0.1 will immediately show a ckip button
+                        behaviourMatrix: {
+                            'offScreen': {
+                                paused: false,
+                                muted: true
+                            }
+                        },
+                        onStartCallback: (function() {try {SmartAva.utils.ava_sc_smartIntxtStart();sc_smartIntxtStart();} catch (f) {}}),
+                        onCappedCallback: (function() {try {SmartAva.utils.ava_sc_smartIntxtNoad();sc_smartIntxtNoad();} catch (f) {}}),
+                        onEndCallback: (function() {try {SmartAva.utils.ava_sc_smartIntxtEnd();sc_smartIntxtEnd();} catch (f) {}})
+                    });
+                } catch (e) {console.warn('error caught : ' + e);}
+            };
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(sc, s);
+        }
+    }
+    var sc_pixel = document.createElement("script");
+    sc_pixel.type = "text/javascript";
+    sc_pixel.src = SmartIntxt.config.Intext_management_script;
+    document.body.appendChild(sc_pixel);
+})();
